@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <form>
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" class="form-control" id="Input1" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+              <label>Select Country</label>
+              <select class="form-control" id="Input2" aria-placeholder="Choose Country">
+                <option>India</option>
+                <option>Sri Lanka</option>
+                <option>Bhutan</option>
+                <option>Malaysia</option>
+                <option>Singapore</option>
+              </select>
+            </div>
+            <label> Choose Username</label>
+            <input type="text" id="Input3" onkeyup="filterFunc()" placeholder="Choose a Username">
+            <p id="result">huhulu123,iteration123,jazbaatilaunda97,majedaar190,kamyaab87</p>>
+            <button aria-label="Sort" onclick="Sort()" type="button">Sort</button>
+            <p id="res"></p>
+          </form>
+    </body>
+    <script>
+      var li=document.getElementById("result").innerText;
+
+     function filterFunc()
+     {
+
+         var gmy=document.getElementById("Input3").value;
+         reg=new RegExp(gmy);
+         var abc=document.getElementById("result").innerText;
+         console.log(li);
+         var array = li.split(",");
+         filter = array.filter((element) => reg.test(element));
+         var finalRes = filter.join(",");
+         document.getElementById("result").innerHTML=finalRes;
+
+         
+     }
+     function Sort()
+     {
+      var array = li.split(",");
+      sortedArr=array.sort();
+      var sortedRes=sortedArr.join(",");
+      document.getElementById("res").innerHTML=sortedRes;
+     }
+ </script>
+</html>

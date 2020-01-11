@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .form-label-group{
+              max-width: 500px;
+  margin: auto;}
+        </style>
+    </head>
+<body>
+ <div class="form-label-group">
+    Username<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputEmail"></label>
+              </div><br>
+<div class="form-label-group">
+                Password <input type="password" id="inputPassword1" class="form-control" placeholder="Enter Password" required>
+                <label for="inputPassword"></label>
+              </div><br>
+<div class="form-label-group">
+               Confirm Password <input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Password" required>
+                <label for="inputPassword2"></label>
+                <button onclick="myFunction()">Submit</button>
+              </div><br>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("inputPassword1").value;
+  var y = document.getElementById("inputPassword2").value;
+
+  document.getElementById("demo").innerHTML = x;
+    reg1=/(?=.*[a-z])(?=.*[$*&])(?=.*[A-Z]).{8,}/;
+    reg2=/(abc)/;
+  //document.getElementById("demo").innerHTML = (reg1.test(x) && reg2.test(x) && x===y);
+	(reg1.test(x) && reg2.test(x) && x===y)? alert("Successful") : alert("Unsuccessful");
+}
+</script>
+
+</body>
+</html>
