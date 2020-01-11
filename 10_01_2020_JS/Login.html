@@ -27,14 +27,15 @@
 
 <script>
 function myFunction() {
+  var gmy=document.getElementById("inputEmail").value;
   var x = document.getElementById("inputPassword1").value;
   var y = document.getElementById("inputPassword2").value;
 
-  document.getElementById("demo").innerHTML = x;
+  //document.getElementById("demo").innerHTML = x;
     reg1=/(?=.*[a-z])(?=.*[$*&])(?=.*[A-Z]).{8,}/;
     reg2=/(abc)/;
   //document.getElementById("demo").innerHTML = (reg1.test(x) && reg2.test(x) && x===y);
-	(reg1.test(x) && reg2.test(x) && x===y)? alert("Successful") : alert("Unsuccessful");
+	(reg1.test(x) && reg2.test(x) && x===y)? alert("Successful \n The Email Is "+gmy+" \n The Password is " +x) : alert("Unsuccessful");
 }
 </script>
 
