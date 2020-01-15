@@ -1,0 +1,49 @@
+<p>home works!</p>
+<form [formGroup]="profileForm" style="text-align:center" (ngSubmit)="onSubmit()">
+    <label>
+ID:        <input type="text" formControlName="id">
+      </label>
+    <BR> <BR>
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName">
+    </label>
+  <BR> <BR>
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+    <BR> <BR>
+
+    <!-- <div formGroupName="address">
+        <h5>Address</h5>
+      
+        <label>
+          Street:
+          <input type="text" formControlName="street">
+        </label>
+        <BR> <BR>
+
+        <label>
+          City:
+          <input type="text" formControlName="city">
+        </label>
+        <BR><BR>
+
+        <label>
+          State:
+          <input type="text" formControlName="state">
+        </label>
+        <BR> <BR>
+
+        <label>
+          Zip Code:
+          <input type="text" formControlName="zip">
+        </label>
+        <BR> <BR>
+        
+      </div> -->
+      <button type="submit">
+            Submit
+        </button>
+  </form>
