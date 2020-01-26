@@ -21,7 +21,7 @@ public class Main {
 		System.out.println(twoBHK);
 		
 		List<Component> threeBHKRooms = Arrays.asList(livingRoom,bigBedroom,smallBedroom,smallBedroom,kitchen,washRoom);
-		Component threeBHK = new Composite("One BHK Flat", threeBHKRooms);
+		Component threeBHK = new Composite("Three BHK Flat", threeBHKRooms);
 		System.out.println(threeBHK);
 		
 		List<Component> oneRKrooms = Arrays.asList(livingRoom,kitchen,washRoom);
